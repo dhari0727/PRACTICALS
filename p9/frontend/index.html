@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Site</title>
+</head>
+<body>
+    <h1>Welcome to our Product Site</h1>
+    <p>This is the frontend connecting to Express backend.</p>
+    <button id="btn">Check Backend</button>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', async () => {
+            const res = await fetch('http://localhost:3000/');
+            const text = await res.text();
+            document.getElementById('response').innerText = text;
+        });
+    </script>
+</body>
+</html>
