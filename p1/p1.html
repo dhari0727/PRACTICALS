@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Static Poll Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .poll-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      width: 360px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .options {
+      margin-bottom: 30px;
+    }
+
+    .options button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #eeeeee;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .options button:hover {
+      background-color: #dcdcdc;
+    }
+
+    .results {
+      text-align: left;
+    }
+
+    .result-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 24px;
+      margin: 10px 0;
+    }
+
+    .fill-a {
+      width: 65%; /* Example */
+      background-color: #4CAF50;
+      height: 100%;
+      color: white;
+      text-align: center;
+      line-height: 24px;
+      font-size: 14px;
+    }
+
+    .fill-b {
+      width: 35%; /* Example */
+      background-color: #2196F3;
+      height: 100%;
+      color: white;
+      text-align: center;
+      line-height: 24px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poll-box">
+    <h2>What's your favorite language?</h2>
+
+    <div class="options">
+      <button onclick="vote('JavaScript')">JavaScript</button>
+      <button onclick="vote('Python')">Python</button>
+    </div>
+
+     <div class="results">
+      <p id="js">JavaScript Votes: 0</p>
+      <p id="py">Python Votes: 0</p>
+    </div>
+  </div>
+<script>
+    let js = 0
+    let py = 0
+    function vote(choice) {
+    if (choice === 'JavaScript') {
+        js++
+    } else if (choice === 'Python') {
+        py++
+    }
+    updatevotes();
+    }
+
+    function updatevotes() {
+    document.getElementById('js').innerHTML = "Javascript Votes : " + js;
+    document.getElementById('py').innerHTML = "Python Votes : " + py;
+    }
+
+    setInterval(function(){
+        let randomnumber = Math.random();
+
+        if(randomnumber < 0.5){
+            vote('JavaScript');
+        } else {
+            vote('Python'); 
+        }
+    },2000);
+</script>
+</script>
+</body>
+</html>

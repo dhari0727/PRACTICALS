@@ -1,0 +1,24 @@
+/* Modern register form (same visual language as login) */
+.register-container{max-width:520px;margin:48px auto;padding:28px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02);box-shadow:var(--shadow-card)}
+.auth-title{font-size:1.4rem;margin-bottom:8px;color:var(--text);font-weight:800}
+.auth-sub{color:var(--muted);font-size:0.95rem;margin-bottom:18px}
+.auth-form .input{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text);margin-bottom:12px}
+.auth-actions{display:flex;gap:8px;align-items:center}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#4f6ef8);color:#061026}
+.btn-secondary{background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+/* Reuse login form helpers */
+.login-form{background:transparent;padding:0;border-radius:0;box-shadow:none}
+.login-form h2{font-size:2rem;margin:0 0 8px;color:var(--text);font-weight:800}
+.login-form p{color:var(--muted);margin-bottom:1.25rem}
+.form-group label{display:block;margin-bottom:0.5rem;color:var(--muted);font-weight:700;font-size:0.9rem}
+.form-group input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text);font-size:1rem}
+.form-group input:focus{outline:none;border-color:rgba(124,58,237,0.9);box-shadow:0 6px 20px rgba(124,58,237,0.08);transform:translateY(-2px)}
+.login-btn{width:100%;padding:12px;background:linear-gradient(90deg,var(--accent),#4f6ef8);border:none;border-radius:10px;color:#061026;font-weight:800;cursor:pointer}
+.login-btn:hover{transform:translateY(-2px)}
+.form-links{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.form-links a{color:var(--accent);text-decoration:none}
+
+@media (max-width:480px){
+	.register-container{margin:24px;padding:18px}
+}

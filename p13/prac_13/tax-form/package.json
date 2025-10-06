@@ -1,0 +1,21 @@
+{
+  "name": "tax-form",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["express", "ejs", "tax", "form"],
+  "author": "Your Name",
+  "license": "MIT",
+  "description": "A simple tax form website using Express and EJS",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

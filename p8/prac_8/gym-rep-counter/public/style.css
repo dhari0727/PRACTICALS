@@ -1,0 +1,30 @@
+body {
+  font-family: Arial;
+  background: #f0f0f0;
+  text-align: center;
+  padding: 40px;
+}
+.counter {
+  font-size: 60px;
+  margin: 30px;
+}
+button {
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.increment {
+  background-color: #4CAF50;
+  color: white;
+}
+.decrement {
+  background-color: #f44336;
+  color: white;
+}
+.reset {
+  background-color: #607D8B;
+  color: white;
+}

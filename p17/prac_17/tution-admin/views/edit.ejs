@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Student</title>
+</head>
+<body>
+  <h1>Edit Student</h1>
+  <form action="/students/<%= student._id %>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%= student.name %>" required>
+    <input type="number" name="age" value="<%= student.age %>" required>
+    <input type="text" name="course" value="<%= student.course %>" required>
+    <button type="submit">Update</button>
+  </form>
+  <a href="/">⬅ Back</a>
+</body>
+</html>

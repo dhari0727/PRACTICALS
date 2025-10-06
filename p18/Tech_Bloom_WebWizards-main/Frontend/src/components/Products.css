@@ -1,0 +1,7 @@
+.product-grid{ /* lightweight, layout only */
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:18px}
+.product-card{display:flex;flex-direction:column;gap:12px}
+.product-image{display:flex;align-items:center;justify-content:center}
+.product-info{width:100%}
+.card-actions{display:flex;gap:8px}
+.buy-btn,.cart-btn{flex:1}

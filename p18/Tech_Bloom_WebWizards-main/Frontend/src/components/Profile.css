@@ -1,0 +1,13 @@
+/* Profile layout only - visuals handled by App.css */
+.profile-container{max-width:1100px;margin:0 auto;padding:28px}
+.profile-header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.avatar-circle{width:84px;height:84px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.form-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.orders-list{display:grid;gap:12px}
+.order-card{padding:12px;border-radius:10px}
+
+@media (max-width: 480px){
+  .form-row{grid-template-columns:1fr}
+  .info-grid{grid-template-columns:1fr}
+}

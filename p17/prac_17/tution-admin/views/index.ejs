@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Admin Panel</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Student Admin Panel</h1>
+
+  <!-- Add Student -->
+  <form action="/students" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="text" name="course" placeholder="Course" required>
+    <button type="submit">Add Student</button>
+  </form>
+
+  <!-- Student List -->
+  <h2>Students</h2>
+  <ul>
+    <% students.forEach(student => { %>
+      <li>
+        <%= student.name %> - <%= student.age %> - <%= student.course %>
+        <a href="/students/<%= student._id %>/edit">Edit</a>
+        <form action="/students/<%= student._id %>?_method=DELETE" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
